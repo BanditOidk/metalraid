@@ -7,7 +7,7 @@
     <title>FORMATO DE VISTA TÉCNICA</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/style.css?<?=date('Y-m-d H:i:s')?>">
   </head>
   <?php include "header.php"; ?>
   <body>
@@ -18,6 +18,14 @@
         
         <hr>
 
+        <div>
+            <label for="descripcion">Nombre Del Trabajador<span>*</span></label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div>
+            <label for="descripcion">Fecha de la Observacion<span>*</span></label>
+            <input type="date" name="fecha" id="fecha">
+        </div>
         <div>
             <label for="descripcion">Descripción de Trabajo<span>*</span></label>
             <input type="text" name="descripcion" id="descripcion">
@@ -235,7 +243,11 @@
         <div>
             <label for="riesgos">Riesgos de trabajo específicos (especificar)<span>*</span></label>
             <input type="text" name="riesgos" id="riesgos">
-        </div><br>
+        </div><br> <br>
+        <div>
+            <label for="observaciones">Observaciones del trabajo<span>*</span></label>
+            <input type="text" name="observaciones" id="observaciones">
+        </div><br> <br>
         
         <div>
             <label for="imagen">Apuntes, medidas, gráficas de Campo</label>

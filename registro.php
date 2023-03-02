@@ -2,7 +2,9 @@
 
     include_once('conexion.php');
 
+    $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
+    $fecha = $_POST['fecha'];
     $objetivo = $_POST['objetivo'];
     $area = $_POST['area'];
     $persona =  $_POST['persona']; 
@@ -30,6 +32,7 @@
     $procedimientos = $_POST['procedimientos'];
     $jefe = $_POST['jefe'];
     $riesgos = $_POST['riesgos'];
+    $observaciones = $_POST['observaciones'];
 
 
     $dir_subida = 'files/';
@@ -38,10 +41,10 @@
     $imagenValida = false;
  
     $conectar = conexion();
-    $sql="INSERT INTO formulario (descripcion, objetivo, area, persona, logistico, ubicacion, tiempo, trabajo, prioridad, accesibilidad, 
-    disponibilidad, horario, anticorrupcion, valorizacion, negocio, alcance, mano, materiales, servicios, cliente, tipotrabajo, epp, equipos, procedimientos, jefe, riesgos, imagen) 
-    VALUES ('$descripcion','$objetivo','$area','$persona', '$logistico', '$ubicacion','$tiempo','$trabajo', '$prioridad', '$accesibilidad', '$disponibilidad', '$horario', 
-    '$anticorrupcion', '$valorizacion', '$negocio', '$alcance', '$mano', '$materiales', '$servicios', '$cliente', '$tipotrabajo', '$epp', '$equipos', '$procedimientos', '$jefe', '$riesgos','$imagenRuta')";
+    $sql="INSERT INTO formulario (nombre, descripcion, fecha, objetivo, area, persona, logistico, ubicacion, tiempo, trabajo, prioridad, accesibilidad, 
+    disponibilidad, horario, anticorrupcion, valorizacion, negocio, alcance, mano, materiales, servicios, cliente, tipotrabajo, epp, equipos, procedimientos, jefe, riesgos, observaciones, imagen) 
+    VALUES ('$nombre','$descripcion','$fecha','$objetivo','$area','$persona', '$logistico', '$ubicacion','$tiempo','$trabajo', '$prioridad', '$accesibilidad', '$disponibilidad', '$horario', 
+    '$anticorrupcion', '$valorizacion', '$negocio', '$alcance', '$mano', '$materiales', '$servicios', '$cliente', '$tipotrabajo', '$epp', '$equipos', '$procedimientos', '$jefe', '$riesgos','$observaciones','$imagenRuta')";
     $resultado = mysqli_query($conectar, $sql);
 
     //$id_insert = mysqli_insert_id($conectar);

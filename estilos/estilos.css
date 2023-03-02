@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -10,25 +11,31 @@ body{
 html{
     scroll-behavior: smooth;
 }
-h1{ font-size: 3.5em; }
-h2{ font-size: 2.7em; }
-h3{ font-size: 2em;   }
+
 p { font-size: 1.25em;}
 ul{ list-style: none; }
 li{font-size: 1.25em; }
+h1{
+    margin: 0;
+    padding: 10px 15px ;
+    font-weight: bold;
+    color:  rgb(0, 0, 0);
+    font-size: 2.5em;
+    
+}
 
 header{
-    background-color: rgb(245, 245, 245);
+    background-color: #ffb606;
 }
 
 header .logo{
-    margin: 0;
-    padding: 25px 30px ;
+    margin: 15px;
+    padding: 10px 15px ;
     font-weight: bold;
-    color:  rgb(137, 252, 119);
-    font-size: 1.6em;
+    color:  rgb(255, 255, 255);
+    font-size: 3.6em;
 }
-header .container{
+header .containers{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,9 +52,14 @@ header a{
     text-decoration: none;
     font-weight: bold;
     color: black;
+    font-size: 1.5em;
 }
 header a:hover{
-    color: rgb(137, 252, 119) ;
+    color: rgb(255, 255, 255) ;
+}
+thead{
+    font-family: 'Tilt Warp', cursive;
+    font-size: 1.2em;
 }
 
 @media (min-width: 1080px){
@@ -55,7 +67,7 @@ header a:hover{
         position: top;
         width: 100%;
     }
-    header .container{
+    header .containers{
         flex-direction: row;
         justify-content: space-between;
     }

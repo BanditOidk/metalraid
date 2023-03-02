@@ -2,7 +2,7 @@
 //mysqli_connect
     function conexion(){
 
-        $host = "localhost:3307";
+        $host = "localhost";
         $usuario = "root";
         $contraseña = "";
         $db = "formulario_metalraid";
