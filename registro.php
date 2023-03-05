@@ -85,17 +85,21 @@ $fecha = date('Y-m-d');
             $imagenValida = true;
 
         if($resultado){
-            echo "Archivo Guardado";
+            echo "<script>alert('Formulario Enviado') </script>";
+            echo "<script>setTimeout(\"location.href='form.php'\",1000)</script>";
         } else {
-            echo "Error al guardar archivo";
+            echo "<script>alert('Error Al Enviar El Formulario :(') </script>";
+            echo "<script>setTimeout(\"location.href='form.php'\",1000)</script>";
         }   
 
         } else {
-            echo "Archivo ya existe";
+            echo "<script>alert('El Archivo Ya Existe') </script>";
+            echo "<script>setTimeout(\"location.href='form.php'\",1000)</script>";
         }
 
     } else {
-        echo "Archivo no permitido o excede el tamaño";
+        echo "<script>alert('Archivo Invalido o Muy Pesado') </script>";
+            echo "<script>setTimeout(\"location.href='form.php'\",1000)</script>";
     }
     
     }
