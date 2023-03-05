@@ -5,10 +5,9 @@
     
 date_default_timezone_set("America/Lima");
 
-$fecha = date('d-m-Y');
+$fecha = date('Y-m-d');
 
     $nombre = $_POST['nombre'];
-    $fecha = $_POST['fecha'];
     
     $descripcion = $_POST['descripcion'];
     $objetivo = $_POST['objetivo'];

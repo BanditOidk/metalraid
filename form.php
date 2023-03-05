@@ -23,10 +23,6 @@
             <input type="text" name="nombre" id="nombre">
         </div>
         <div>
-            <label for="descripcion">Fecha de la Observacion<span>*</span></label>
-            <input type="date" name="fecha" id="fecha">
-        </div>
-        <div>
             <label for="descripcion">Descripción de Trabajo<span>*</span></label>
             <input type="text" name="descripcion" id="descripcion">
         </div>
