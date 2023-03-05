@@ -242,8 +242,10 @@
         </div><br> <br>
         <div>
             <label for="observaciones">Observaciones del trabajo<span>*</span></label>
-            <input type="text" name="observaciones" id="observaciones">
-        </div><br> <br>
+            <textarea name="observaciones" rows="5" id="texarea"></textarea>
+        </div>
+
+        <br><br>
         
         <div>
             <label for="imagen">Apuntes, medidas, gráficas de Campo</label>

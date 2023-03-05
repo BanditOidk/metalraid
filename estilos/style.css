@@ -45,6 +45,7 @@
       border: 1px solid #ccc;
       border-radius: 3px;
       vertical-align: middle;
+      background-color: beige;
       }
       input:hover, textarea:hover, select:hover {
       outline: none;
@@ -134,6 +135,12 @@
       button:hover {
       background-color: #0666a3;
       }
+      #texarea{
+            border: none ;
+            bottom: 0;
+            right: 0;
+            background-color: beige;
+        }
       @media (min-width: 568px) {
       .title-block {
       display: flex;
