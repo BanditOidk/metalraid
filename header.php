@@ -13,7 +13,7 @@
             <nav>
                 <a href="form.php">Inicio</a>
                 <a href="lista.php">Lista</a>
-               
+                <a href="./login/salir.php">Salir</a>
             </nav>
         </div>
     </header>
