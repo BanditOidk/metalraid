@@ -2,9 +2,15 @@
 
     include_once('conexion.php');
 
+    
+date_default_timezone_set("America/Lima");
+
+$fecha = date('d-m-Y');
+
     $nombre = $_POST['nombre'];
-    $descripcion = $_POST['descripcion'];
     $fecha = $_POST['fecha'];
+    
+    $descripcion = $_POST['descripcion'];
     $objetivo = $_POST['objetivo'];
     $area = $_POST['area'];
     $persona =  $_POST['persona']; 
