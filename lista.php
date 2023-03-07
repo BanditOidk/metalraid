@@ -15,19 +15,19 @@
     <link rel="stylesheet" href="estilos/style.css?<?=date('Y-m-d H:i:s')?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Formatos</title>
+    <title >Formatos</title>
     
 </head>
 <?php include "header.php"; ?>
 </head>
-<br><br>
+<br>
 <center>
 <body>
-    <h1>Formatos</h1>
-
+    <h1 id="title">Formatos</h1>
+<br>
     <div class="col-md-8">
                             <table class="table" >
-                                <thead class="table-success table-striped" >
+                                <thead class="table table-striped table-dark">
                                     <tr>
                                     <th></th>
                                         <th>N° Formulario</th>
@@ -45,7 +45,7 @@
                                         ?>
                                             <tr>
                                             <th></th>
-                                                <th><?php  echo $row['id']?></th>
+                                                <th id="id"><?php  echo $row['id']?></th>
                                                 <th><?php  echo $row['nombre']?></th>
                                                 <th><?php  echo $row['fecha']?></th>
                                                 <th> <a href="reporte.php?id=<?php echo $row['id']?>">Descargar Excel</a></th>    

@@ -86,7 +86,7 @@ $fecha = date('Y-m-d');
 
         if($resultado){
             echo "<script>alert('Formulario Enviado') </script>";
-            echo "<script>setTimeout(\"location.href='form.php'\",1000)</script>";
+            echo "<script>setTimeout(\"location.href='lista.php'\",1000)</script>";
         } else {
             echo "<script>alert('Error Al Enviar El Formulario :(') </script>";
             echo "<script>setTimeout(\"location.href='form.php'\",1000)</script>";
