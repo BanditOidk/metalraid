@@ -9,7 +9,7 @@
 </head>
 <header>
         <div class="containers">
-          <a href="index.html"><p class="logo">Metal Raid Perú</p></a> 
+          <a href="index.html"><p class="logo">Metal Raid </p></a> 
             <nav>
                 <a href="form.php">Inicio</a>
                 <a href="lista.php">Lista</a>

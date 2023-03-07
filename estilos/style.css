@@ -140,6 +140,15 @@
             right: 0;
             background-color: beige;
         }
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+        #bienvenido{
+            font-size: 2.5em;
+            font-family: 'Tilt Warp', cursive;
+            position: relative;
+            top: 12px;
+        }
+
+
       @media (min-width: 568px) {
       .title-block {
       display: flex;

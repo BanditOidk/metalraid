@@ -29,11 +29,13 @@
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
+                                    <th></th>
                                         <th>N° Formulario</th>
                                         <th>Nombre</th>
                                         <th>Fecha</th>
                                         <th></th>
                                         <th></th>
+                                        
                                     </tr>
                                 </thead>
 
@@ -42,11 +44,12 @@
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
                                             <tr>
+                                            <th></th>
                                                 <th><?php  echo $row['id']?></th>
                                                 <th><?php  echo $row['nombre']?></th>
                                                 <th><?php  echo $row['fecha']?></th>
                                                 <th> <a href="reporte.php?id=<?php echo $row['id']?>">Descargar Excel</a></th>    
-                                                                                    
+                                                <th></th>                        
                                             </tr>
                                         <?php 
                                             }

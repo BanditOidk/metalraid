@@ -12,8 +12,8 @@
     $_SESSION['username'] = $usuario; 
     header("location: ../form.php");
   }else{
-
-    echo "DATOS INCORRECTOS";
+    echo "<script>alert('Datos Incorrectos :(') </script>";
+    echo "<script>setTimeout(\"location.href='login.php'\",1000)</script>";
   }
 
   // if(!empty($_POST['btningresar'])){

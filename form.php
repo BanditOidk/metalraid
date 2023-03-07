@@ -1,3 +1,4 @@
+<?php include "header.php"; ?>
 
 <?php
 session_start();
@@ -6,10 +7,13 @@ $usuario = $_SESSION['username'];
 if(!isset($usuario)){
     header ("location: login.php");
 }else{
-    echo "<h1>Bienvenido $usuario</h1>";
+    ?>
+      "<h1 id="bienvenido">Bienvenido <?php echo $usuario; ?></h1>";
+    <?php    
 }
-
 ?>
+
+
 <!DOCTYPE html>
 <html> 
   <head>
@@ -21,11 +25,11 @@ if(!isset($usuario)){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/style.css?<?=date('Y-m-d H:i:s')?>">
   </head>
-  <?php include "header.php"; ?>
+  
   <body>
     <div class="testbox">
       <form action="registro.php" method="post" enctype="multipart/form-data">
-        <br><br>
+        
         <h3>INFORMACIÓN GENERAL DEL TRABAJO</h3>
         
         <hr>
@@ -269,5 +273,6 @@ if(!isset($usuario)){
         </div>
       </form>
     </div>
+    
   </body>
 </html>
