@@ -11,6 +11,9 @@ body{
 html{
     scroll-behavior: smooth;
 }
+html, body{
+    animation: drop 0.8s ease; /* Make things beautiful */
+}
 
 p { font-size: 1.25em;}
 ul{ list-style: none; }
@@ -25,16 +28,17 @@ h1{
 }
 
 header{
-    background-color: #ffb606;
+    background-color: #ff7f27;
+
     
 }
 
 header .logo{
     margin: 15px;
-    padding: 10px 15px ;
+    padding: 25px 15px ;
     font-weight: bold;
     color:  rgb(255, 255, 255);
-    font-size: 2.9em;
+    font-size: 3.1em;
     
 }
 header .containers{
@@ -54,7 +58,7 @@ header a{
     text-decoration: none;
     font-weight: bold;
     color: black;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 header a:hover{
     color: rgb(255, 255, 255) ;
@@ -63,11 +67,20 @@ thead{
     font-family: 'Tilt Warp', cursive;
     font-size: 1.2em;
 }
+#salir{
+    color: #ffce2c;
+}
+#salir:hover{
+    color: rgb(255, 255, 255) ;
+}
+
+
 
 @media (min-width: 1080px){
     header{
         position: top;
         width: 100%;
+        height: auto;
     }
     header .containers{
         flex-direction: row;
@@ -78,4 +91,11 @@ thead{
         padding-bottom: 0;
         padding-right: 20px;
     }
+    #logoimg{
+        height: auto;
+        width: 85px;
+        position: relative;
+        right: -12px;
+    }
+    
 }

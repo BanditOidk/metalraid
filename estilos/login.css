@@ -260,7 +260,7 @@ input[type=text],[type=password]:placeholder {
 } 
 
 #icon {
-  width:20%;
+  width:auto;
 }
 
 * {

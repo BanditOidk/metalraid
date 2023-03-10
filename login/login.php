@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingrese</title>
-    <link rel="stylesheet" href="../estilos/login.css">
+    <link rel="stylesheet" href="../estilos/login.css?<?=date('Y-m-d H:i:s')?>">
 </head>
 <body>
     <div class="wrapper fadeInDown">
@@ -14,7 +14,7 @@
           <h2 class="active"> Inicia Sesión </h2>
           
           <div class="fadeIn first">
-            <img src="../fotos/Logotipo.png" id="icon"/>
+           <a href="../index.html"><img src="../fotos/Logotipo.png" height="125" id="icon"/></a>
           </div>
       
           <form method="POST" action="login_proceso.php">

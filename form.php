@@ -8,11 +8,11 @@ if(!isset($usuario)){
     header ("location: login.php");
 }else{
     ?>
-      "<h1 id="bienvenido">Bienvenido <?php echo $usuario; ?></h1>";
+      <h1 id="bienvenido">Bienvenido </h1>
+      <h2 id="parrafo"><?php echo $usuario; ?></h2>
     <?php    
 }
 ?>
-
 
 <!DOCTYPE html>
 <html> 

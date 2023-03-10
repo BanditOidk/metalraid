@@ -9,11 +9,13 @@
 </head>
 <header>
         <div class="containers">
-          <a href="index.html"><p class="logo">Metal Raid </p></a> 
+            <p class="logo">Metal Raid </p>
+            <img src="fotos/logotipo.png" id="logoimg">
             <nav>
                 <a href="form.php">Inicio</a>
-                <a href="lista.php">Lista</a>
-                <a href="./login/salir.php">Salir</a>
+                <a href="lista.php">Lista</a>   
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./login/salir.php" id="salir">Salir</a>
             </nav>
         </div>
     </header>

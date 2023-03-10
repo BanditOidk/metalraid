@@ -3,12 +3,11 @@
     include_once('conexion.php');
 
     
-date_default_timezone_set("America/Lima");
+    date_default_timezone_set("America/Lima");
 
-$fecha = date('Y-m-d');
+    $fecha = date('Y-m-d');
 
     $nombre = $_POST['nombre'];
-    
     $descripcion = $_POST['descripcion'];
     $objetivo = $_POST['objetivo'];
     $area = $_POST['area'];
