@@ -265,15 +265,15 @@ if(!isset($usuario)){
             </select>
             <div id="contenedor7"></div>
             <script>
-    function generarInput6() {
-      var select = document.getElementById("valorizacion");
+    function generarInput7() {
+      var select = document.getElementById("negocio");
       var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
       var contenedor = document.getElementById("contenedor7");
 
       if (opcionSeleccionada) {
         var input = document.createElement("input");
         input.type = "text";
-        input.name = "valorizacion";
+        input.name = "negocio";
         input.placeholder = "Especificar";
 
         contenedor.appendChild(input);
@@ -284,7 +284,7 @@ if(!isset($usuario)){
 
         <div>
             <label for="alcance">Tipo de Documentación de alcance de servicio<span>*</span></label>
-            <select id="alcance" name="alcance">
+            <select id="alcance" onchange="generarInput8()" name="alcance">
             <option value="-">-</option>
             <option value="Bosquejo">Bosquejo</option>
             <option value="Memoria de Cálculo">Memoria de Cálculo</option>
@@ -292,38 +292,106 @@ if(!isset($usuario)){
             <option value="Información Verbal">Información Verbal</option>
             <option value="Otros">Otros (especificar)</option>
             </select>
+            <div id="contenedor8"></div>
+            <script>
+    function generarInput8() {
+      var select = document.getElementById("alcance");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor8");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "alcance";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
 
         <div>
             <label for="mano">Mano de Obra<span>*</span></label>
-            <select id="mano" name="mano">
+            <select id="mano" onchange="generarInput9()" name="mano">
               <option value="-">-</option>
               <option value="Técnicos">Técnicos </option>
               <option value="Ingeniería">Ingeniería</option>
               <option value="Mano de obra con certificación especial">Mano de obra con certificación especial (especificar)</option>
               <option value="Certificaciones de empresa específicos">Certificaciones de empresa específicos (especificar)</option>           
             </select>
+            <div id="contenedor9"></div>
+            <script>
+    function generarInput9() {
+      var select = document.getElementById("mano");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Certificaciones de empresa específicos";
+      var contenedor = document.getElementById("contenedor9");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "mano";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
 
         <div>
             <label for="materiales">Materiales<span>*</span></label>
-            <select id="materiales" name="materiales">
+            <select id="materiales" onchange="generarInput10()" name="materiales">
               <option value="-">-</option>
               <option value="Materiales especiales">Materiales especiales (especificar)</option>          
             </select>
+            <div id="contenedor10"></div>
+            <script>
+    function generarInput10() {
+      var select = document.getElementById("materiales");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Materiales especiales";
+      var contenedor = document.getElementById("contenedor10");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "materiales";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
 
         <div>
             <label for="servicios">Servicios<span>*</span></label>
-            <select id="servicios" name="servicios">
+            <select id="servicios" onchange="generarInput11()" name="servicios">
               <option value="-">-</option>
               <option value="Servicios externos especiales">Servicios externos especiales (especificar)</option>          
             </select>
+            <div id="contenedor11"></div>
+            <script>
+    function generarInput11() {
+      var select = document.getElementById("servicios");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Servicios externos especiales";
+      var contenedor = document.getElementById("contenedor11");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "servicios";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
         
         <div>
             <label for="cliente">Servicios compartidos con Cliente<span>*</span></label>
-            <select id="cliente" name="cliente">
+            <select id="cliente" onchange="generarInput12()" name="cliente">
               <option value="-">-</option>
               <option value="Agua">Agua</option>
               <option value="Comedor">Comedor</option>
@@ -333,6 +401,23 @@ if(!isset($usuario)){
               <option value="Aire Comprimido (especificar presión y distancia a punto de energía)">Aire Comprimido (especificar presión y distancia a punto de energía)</option>   
               <option value="Otros">Otros (especificar)</option>
             </select>
+            <div id="contenedor12"></div>
+            <script>
+    function generarInput12() {
+      var select = document.getElementById("cliente");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor12");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "cliente";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
 
         <hr>
@@ -341,7 +426,7 @@ if(!isset($usuario)){
 
         <div>
             <label for="tipotrabajo">Tipo de Trabajo<span>*</span></label>
-            <select id="tipotrabajo" name="tipotrabajo">
+            <select id="tipotrabajo" onchange="generarInput13()" name="tipotrabajo">
               <option value="-">-</option>
               <option value="Trabajo en Caliente">Trabajo en Caliente</option>
               <option value="Trabajo Eléctrico">Trabajo Eléctrico</option>
@@ -349,6 +434,23 @@ if(!isset($usuario)){
               <option value="Trabajo de Maniobras de Izaje">Trabajo de Maniobras de Izaje</option> 
               <option value="Otros">Otros (especificar)</option>           
         </select>
+        <div id="contenedor13"></div>
+            <script>
+    function generarInput13() {
+      var select = document.getElementById("tipotrabajo");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor13");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "tipotrabajo";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
 
         <div>
