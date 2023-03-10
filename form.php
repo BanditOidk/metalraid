@@ -24,6 +24,8 @@ if(!isset($usuario)){
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/style.css?<?=date('Y-m-d H:i:s')?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   </head>
   
   <body>
@@ -80,18 +82,34 @@ if(!isset($usuario)){
         
         <div>
         <label for="prioridad">Prioridad de Ejecución<span>*</span></label>
-        <select id="prioridad" name="prioridad">
+        <select id="prioridad" onchange="generarInput()" name="prioridad">
           <option value="-">-</option>
           <option value="Emergencia">Emergencia</option>
           <option value="Programado">Programado</option>
           <option value="Otros">Otros (especificar)</option>
-        </select>
+        </select>   
+        <div id="contenedor"></div>
+            <script>
+    function generarInput() {
+      var select = document.getElementById("prioridad");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "prioridad";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
 
-        
         <div>
             <label for="accesibilidad">Accesibilidad a área de Trabajo<span>*</span></label>
-            <select id="accesibilidad" name="accesibilidad">
+            <select id="accesibilidad" onchange="generarInput2()" name="accesibilidad">
             <option value="-">-</option>
             <option value="Peatonal">Peatonal</option>
             <option value="Coche de trabajo">Coche de trabajo</option>
@@ -99,12 +117,28 @@ if(!isset($usuario)){
             <option value="Vehicular con Grúa">Vehicular con Grúa</option>
             <option value="Otros">Otros (especificar)</option>
             </select>
-        </div>
+            <div id="contenedor2"></div>
+            <script>
+    function generarInput2() {
+      var select = document.getElementById("accesibilidad");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor2");
 
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "accesibilidad";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
+        </div>
 
         <div>
             <label for="disponibilidad">Disponibilidad de área, equipo, unidad de trabajo<span>*</span></label>
-            <select id="disponibilidad" name="disponibilidad">
+            <select id="disponibilidad" onchange="generarInput3()" name="disponibilidad">
                 <option value="-">-</option>
                 <option value="Trabaja las 24 horas">Trabaja las 24 horas</option>
                 <option value="Tiene paradas de mantenimiento semanal">Tiene paradas de mantenimiento semanal</option>
@@ -112,11 +146,28 @@ if(!isset($usuario)){
                 <option value="Tiene paradas de mantenimiento anual">Tiene paradas de mantenimiento anual</option>
                 <option value="Otros">Otros (especificar)</option>
             </select>
+            <div id="contenedor3"></div>
+            <script>
+    function generarInput3() {
+      var select = document.getElementById("disponibilidad");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor3");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "disponibilidad";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
 
         <div>
             <label for="horario">Horario de trabajo para trabajo del cliente<span>*</span></label>
-            <select id="horario" name="horario">
+            <select id="horario" onchange="generarInput4()" name="horario">
                 <option value="-">-</option>
                 <option value="Lunes a sábado diurno">Lunes a sábado diurno</option>
                 <option value="Lunes a sábado nocturno">Lunes a sábado nocturno</option>
@@ -124,27 +175,78 @@ if(!isset($usuario)){
                 <option value="Feriados">Feriados</option>
                 <option value="Otros">Otros (especificar)</option>
             </select>
+            <div id="contenedor4"></div>
+            <script>
+    function generarInput4() {
+      var select = document.getElementById("horario");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor4");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "horario";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>    
 
         <div>
             <label for="anticorrupcion">Anticorrupción<span>*</span></label>
-            <select id="anticorrupcion" name="anticorrupcion">
+            <select id="anticorrupcion"onchange="generarInput5()" name="anticorrupcion">
                 <option value="-">-</option>
                 <option value="Logístico es transparente con la información">Logístico es transparente con la información</option>
                 <option value="Jefe de área producción  es transparente con la información">Jefe de área producción  es transparente con la información</option>
                 <option value="Jefe de mantenimiento  es transparente con la información">Jefe de mantenimiento  es transparente con la información</option>
                 <option value="Otros indicios de hostigamiento a proveedor">Otros indicios de hostigamiento a proveedor (especificar)</option>
             </select>
+            <div id="contenedor5"></div>
+            <script>
+    function generarInput5() {
+      var select = document.getElementById("anticorrupcion");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros indicios de hostigamiento a proveedor";
+      var contenedor = document.getElementById("contenedor5");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "anticorrupcion";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div> 
 
         <div>
             <label for="valorizacion">Tipo de Valorización<span>*</span></label>
-            <select id="valorizacion" name="valorizacion">
+            <select id="valorizacion" onchange="generarInput6()" name="valorizacion">
                 <option value="-">-</option>
                 <option value="Concursable">Concursable</option>
                 <option value="Exploración de precios">Exploración de precios</option>
                 <option value="Otros">Otros (esppecificar)</option>
             </select>
+            <div id="contenedor6"></div>
+            <script>
+    function generarInput6() {
+      var select = document.getElementById("valorizacion");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor6");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "valorizacion";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
         
         <hr>
@@ -153,7 +255,7 @@ if(!isset($usuario)){
 
         <div>
             <label for="negocio">Línea de Negocio<span>*</span></label>
-            <select id="negocio" name="negocio">
+            <select id="negocio" onchange="generarInput7()" name="negocio">
                 <option value="-">-</option>
                 <option value="Proyecto">Proyecto</option>
                 <option value="Mantenimiento">Mantenimiento</option>
@@ -161,6 +263,23 @@ if(!isset($usuario)){
                 <option value="Servicios Genenerales">Servicios Genenerales</option> 
                 <option value="Otros">Otros (especificar)</option>           
             </select>
+            <div id="contenedor7"></div>
+            <script>
+    function generarInput6() {
+      var select = document.getElementById("valorizacion");
+      var opcionSeleccionada = select.options[select.selectedIndex].value == "Otros";
+      var contenedor = document.getElementById("contenedor7");
+
+      if (opcionSeleccionada) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "valorizacion";
+        input.placeholder = "Especificar";
+
+        contenedor.appendChild(input);
+      }
+    }
+  </script>
         </div>
 
         <div>
@@ -263,10 +382,16 @@ if(!isset($usuario)){
 
         <br><br>
         
-        <div>
+        <div class="custom-file">
+    <input type="file" class="custom-file-input" id="validatedCustomFile" name="imagen" require>
+    <label class="custom-file-label" for="validatedCustomFile">Elegir archivo...</label>
+    <div class="invalid-feedback">Example invalid custom file feedback</div>
+        </div>
+
+        <!-- <div>
             <label for="imagen">Apuntes, medidas, gráficas de Campo</label>
             <input type="file" name="imagen" multiple id="imagen" accept="image/*">
-        </div>
+        </div> -->
 
         <div class="btn-block">
           <button type="submit">Enviar</button>
@@ -275,4 +400,6 @@ if(!isset($usuario)){
     </div>
     
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </html>

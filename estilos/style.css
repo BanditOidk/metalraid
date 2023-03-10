@@ -1,9 +1,6 @@
       html, body {
       min-height: 100%;
       }
-      html, body{
-        animation: drop 0.8s ease; /* Make things beautiful */
-    }
     
       body, div, form, input, select { 
       padding: 0;
